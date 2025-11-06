@@ -1,0 +1,74 @@
+/* Hauptstil: Calibri (wenn verfügbar), sonst Sans-Serif */
+:root{
+    --bg:#ffffff; --fg:#111827; --muted:#6b7280; --accent:#0b5fff;
+    --container:1100px; --glass: rgba(11,17,32,0.04);
+    --radius:10px;
+    font-family: "Calibri", "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);line-height:1.6;font-size:16px;font-family:var(--font)}
+  .container{max-width:var(--container);margin:0 auto;padding:2rem}
+  .site-header{border-bottom:1px solid var(--glass);position:sticky;top:0;background:var(--bg);z-index:50}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .brand .name{font-weight:700;font-size:18px}
+  .brand .surname{font-weight:500;color:var(--muted);font-size:13px}
+  .role{font-size:13px;color:var(--muted);margin-top:6px}
+  .nav{display:flex;gap:1rem}
+  .nav a{color:var(--muted);text-decoration:none;padding:0.35rem 0.5rem;border-radius:6px}
+  .nav a:hover{color:var(--fg);background:var(--glass)}
+  .nav-toggle{display:none;background:none;border:0;font-size:20px;cursor:pointer}
+  
+  .hero{padding:2.4rem 0;background:linear-gradient(180deg, rgba(11,95,255,0.03), transparent 60%)}
+  .hero-inner{display:flex;gap:2rem;align-items:stretch}
+  .hero-left{flex:1}
+  .hero-right{width:320px}
+  .hero h1{font-size:26px;margin:0 0 .6rem;font-weight:700}
+  .lead{color:var(--muted);margin-bottom:1rem}
+  .small-note{font-size:13px;color:var(--muted);margin-top:0.6rem}
+  
+  .btn{display:inline-block;background:var(--accent);color:white;padding:.56rem .9rem;border-radius:8px;text-decoration:none;font-weight:600}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--glass)}
+  .btn.small{padding:.35rem .6rem;font-size:13px;border-radius:6px}
+  
+  .card-profile{background:var(--bg);border-radius:12px;box-shadow:0 6px 20px rgba(11,17,32,0.06);padding:1rem;width:100%;text-align:left}
+  .profile-photo{width: 160px;;height: 160px;;border-radius:12px;object-fit:cover;background:#eee;margin: 0 auto 1rem auto; display: block;}
+  .profile-list{list-style:none;padding:0;margin:0;margin-top:.6rem;font-size:14px;color:var(--muted)}
+  .profile-list li{padding:0.35rem 0;border-bottom:1px dashed var(--glass)}
+  
+  .about h2,.skills h2,.projects h2,.contact h2{font-size:20px;margin-bottom:.6rem}
+  
+  /* Fähigkeiten */
+  .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  .skill{background:var(--glass);padding:1rem;border-radius:8px}
+  
+  /* Projekte */
+  .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+  .project-card{display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg, rgba(11,17,32,0.02), white);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(11,17,32,0.03)}
+  .project-card.wide{grid-column:span 3}
+  .project-meta h3{margin:0 0 .3rem}
+  .proj-sub{color:var(--muted);margin:0 0 .6rem}
+  .tags{font-size:13px;color:var(--muted);margin-bottom:.6rem}
+  .project-footer{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .proj-links{display:flex;gap:.5rem}
+  
+  /* Kontakt */
+  .contact .mailto{color:var(--accent);text-decoration:none;font-weight:600}
+  
+  /* Footer */
+  .site-footer{border-top:1px solid var(--glass);padding:2rem 0;text-align:center;color:var(--muted);font-size:14px}
+  
+  /* Responsive */
+  @media (max-width:1000px){
+    .projects-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-inner{flex-direction:column}
+    .hero-right{width:100%;order:2}
+    .nav{display:none}
+    .nav-toggle{display:block}
+  }
+  @media (max-width:640px){
+    .projects-grid{grid-template-columns:1fr}
+    .skill-grid{grid-template-columns:1fr}
+    .brand .name{font-size:16px}
+    .hero h1{font-size:20px}
+  }
+  
