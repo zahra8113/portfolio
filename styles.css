@@ -17,7 +17,13 @@
   .nav a{color:var(--muted);text-decoration:none;padding:0.35rem 0.5rem;border-radius:6px}
   .nav a:hover{color:var(--fg);background:var(--glass)}
   .nav-toggle{display:none;background:none;border:0;font-size:20px;cursor:pointer}
-  
+
+  .hero-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0.4rem;}
+
+
   .hero{padding:2.4rem 0;background:linear-gradient(180deg, rgba(11,95,255,0.03), transparent 60%)}
   .hero-inner{display:flex;gap:2rem;align-items:stretch}
   .hero-left{flex:1}
@@ -85,6 +91,7 @@
   }
 
   
+
 
 
 
