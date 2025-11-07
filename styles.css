@@ -34,6 +34,13 @@
   .profile-photo{width: 180px;height:220px;border-radius:10px;object-fit:cover; objekt-position:top center;background:#eee;margin: 0 auto 1rem; display: block;}
   .profile-list{list-style:none;padding:0;margin:0;margin-top:.6rem;font-size:14px;color:var(--muted)}
   .profile-list li{padding:0.35rem 0;border-bottom:1px dashed var(--glass)}
+   .project-card.wide {
+    display: block;
+}
+.project-card {
+    min-height: 160px;
+}
+
   
   .about h2,.skills h2,.projects h2,.contact h2{font-size:20px;margin-bottom:.6rem}
   
@@ -73,6 +80,7 @@
   }
 
   
+
 
 
 
